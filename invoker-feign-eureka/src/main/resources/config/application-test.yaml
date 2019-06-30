@@ -1,0 +1,18 @@
+server:
+  port: 10000
+  servlet:
+    context-path: /
+spring:
+  application:
+    name: invoker-feign-eureka
+#http编码配置
+http:
+  encoding:
+    charset: UTF-8
+    force: true
+    enabled: true
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8000/eureka/

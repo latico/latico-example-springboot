@@ -1,0 +1,19 @@
+server:
+  port: 8080
+  servlet:
+    context-path: /
+spring:
+  application:
+    name: starter-origin-eureka-client
+#http编码配置
+http:
+  encoding:
+    charset: UTF-8
+    force: true
+    enabled: true
+
+eureka:
+  client:
+    serviceUrl:
+      #      注册中心的地址
+      defaultZone: http://localhost:8000/eureka/
