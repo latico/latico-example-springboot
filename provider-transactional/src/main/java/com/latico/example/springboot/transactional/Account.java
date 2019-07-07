@@ -6,7 +6,7 @@ import java.math.BigDecimal;
  * <PRE>
  *  数据库javabean对象
  * </PRE>
- * @Author: LanDingDong
+ * @Author: latico
  * @Date: 2019-03-27 10:21:14
  * @Version: 1.0
  */

@@ -29,7 +29,7 @@ import java.util.List;
  *  @EnableBatchProcessing提供用于构建批处理作业的基本配置
  *
  * </PRE>
- * @Author: LanDingDong
+ * @Author: latico
  * @Date: 2019-06-20 17:26:04
  * @Version: 1.0
  */

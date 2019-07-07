@@ -8,7 +8,7 @@ import org.springframework.boot.web.servlet.ServletComponentScan;
  * <PRE>
  *  程序启动入口类
  * </PRE>
- * @Author: LanDingDong
+ * @Author: latico
  * @Date: 2019-03-18 20:40:19
  * @Version: 1.0
  */

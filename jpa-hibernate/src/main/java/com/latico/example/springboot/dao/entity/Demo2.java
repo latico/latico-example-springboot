@@ -8,7 +8,7 @@ import java.io.Serializable;
  * 
  * </p>
  *
- * @author landingdong
+ * @author latico
  * @since 2019-02-26
  */
 @Entity

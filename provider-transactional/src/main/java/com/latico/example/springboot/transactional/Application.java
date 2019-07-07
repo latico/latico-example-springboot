@@ -10,7 +10,7 @@ import java.util.Map;
  * <PRE>
  *  使用程序的方式注入数据库连接，也可以使用配置文件的方式，这里为了简便
  * </PRE>
- * @Author: LanDingDong
+ * @Author: latico
  * @Date: 2019-03-27 10:21:41
  * @Version: 1.0
  */

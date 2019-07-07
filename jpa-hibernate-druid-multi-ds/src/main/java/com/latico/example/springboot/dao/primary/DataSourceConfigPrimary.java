@@ -29,7 +29,7 @@ import java.util.Map;
  * 指定扫描的mapper，sqlSession模板关联指定
  * </PRE>
  *
- * @Author: LanDingDong
+ * @Author: latico
  * @Date: 2019-02-26 09:24:06
  * @Version: 1.0
  */

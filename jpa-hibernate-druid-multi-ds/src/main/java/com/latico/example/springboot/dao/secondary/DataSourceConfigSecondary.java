@@ -27,7 +27,7 @@ import java.util.Map;
  * 多数据源时使用，可以直接拷贝该类配置N个数据源
  * </PRE>
  *
- * @Author: LanDingDong
+ * @Author: latico
  * @Date: 2019-02-26 09:25:32
  * @Version: 1.0
  */

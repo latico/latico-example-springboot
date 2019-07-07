@@ -10,7 +10,7 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
  * <PRE>
  *  程序启动入口类
  * </PRE>
- * @Author: LanDingDong
+ * @Author: latico
  * @Date: 2019-03-13 22:04:55
  * @Version: 1.0
  */
