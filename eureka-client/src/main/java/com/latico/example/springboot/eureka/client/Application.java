@@ -13,7 +13,7 @@ import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
  * @Date: 2019-03-13 22:04:55
  * @Version: 1.0
  */
-@SpringBootApplication(scanBasePackages={"com.latico.example.springboot"})
+@SpringBootApplication(scanBasePackageClasses={Application.class})
 @ServletComponentScan
 //启动注册中心客户端
 @EnableEurekaClient

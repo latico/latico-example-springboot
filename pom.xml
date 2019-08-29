@@ -33,6 +33,7 @@
         <module>springjpa-mybatis-druid-multi-ds-mix</module>
         <module>springbatch</module>
         <module>springbatch-quartz</module>
+        <module>redis</module>
     </modules>
     <packaging>pom</packaging>
 
