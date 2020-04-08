@@ -1,4 +1,4 @@
-package com.latico.example.springboot.eureka.client.controller;
+package com.latico.example.springboot.controller;
 
 import com.latico.commons.common.util.io.FileUtils;
 import com.latico.commons.common.util.logging.Logger;

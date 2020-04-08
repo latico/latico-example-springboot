@@ -12,3 +12,7 @@ http:
     charset: UTF-8
     force: true
     enabled: true
+
+test:
+  abc: 01230
+  bcd: 1230

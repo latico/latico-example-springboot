@@ -54,7 +54,11 @@ public class DynamicJobService {
                 .build();
     }
 
-    //获取Trigger (Job的触发器,执行规则)
+    /**
+     * 获取Trigger (Job的触发器,执行规则)
+     * @param job
+     * @return
+     */
     public Trigger getTrigger(JobEntity job) {
         return TriggerBuilder.newTrigger()
                 .withIdentity(job.getName(), job.getJobGroup())
@@ -62,7 +66,11 @@ public class DynamicJobService {
                 .build();
     }
 
-    //获取JobKey,包含Name和Group
+    /**
+     * 获取JobKey,包含Name和Group
+     * @param job
+     * @return
+     */
     public JobKey getJobKey(JobEntity job) {
         return JobKey.jobKey(job.getName(), job.getJobGroup());
     }

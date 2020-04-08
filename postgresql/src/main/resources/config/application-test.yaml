@@ -1,0 +1,12 @@
+spring:
+
+    ###########################################################
+    ###########################################################
+    #配置数据源
+  datasource:
+    # postgresql数据源
+    postgresql:
+      driver-class-name: org.postgresql.Driver
+      url: jdbc:postgresql://172.168.10.7:5432/test
+      username: cattsoft
+      password: cattsoft

@@ -34,6 +34,7 @@
         <module>springbatch</module>
         <module>springbatch-quartz</module>
         <module>redis</module>
+        <module>postgresql</module>
     </modules>
     <packaging>pom</packaging>
 
@@ -72,9 +73,14 @@
         <slf4j.version>1.7.25</slf4j.version>
         <logback.version>1.2.3</logback.version>
         <janino.version>3.0.11</janino.version>
-        <springcloud.version>Finchley.RELEASE</springcloud.version>
-        <springboot.version>2.1.3.RELEASE</springboot.version>
-        <swagger.version>2.6.1</swagger.version>
+        <springcloud.version>Hoxton.RELEASE</springcloud.version>
+        <springboot.version>2.2.1.RELEASE</springboot.version>
+
+        <!--旧版本的springboot和springcloud组合，因为新版的JPA对bean对象格式规范检测很严格，程序启动会报错提示修改字段为规范-->
+        <!--<springcloud.version>Finchley.RELEASE</springcloud.version>
+        <springboot.version>2.1.4.RELEASE</springboot.version>-->
+
+        <swagger.version>2.8.0</swagger.version>
         <feign.version>10.2.0</feign.version>
     </properties>
 
@@ -121,13 +127,6 @@
                 </configuration>
             </plugin>
 
-            <!--打包骨架插件，有bug(模块中不能含有名称为config的文件夹)-->
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-archetype-plugin</artifactId>
-                <version>3.0.1</version>
-            </plugin>
-
             <plugin>
                 <artifactId>maven-clean-plugin</artifactId>
                 <version>3.0.0</version>
@@ -164,7 +163,26 @@
         </dependency>-->
 
         <!-- 单元测试结束-->
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.18.6</version>
+        </dependency>
 
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.latico.commons</groupId>
+            <artifactId>latico-commons-common</artifactId>
+            <version>1.0.0</version>
+        </dependency>
+        <!-- thymeleaf模版 -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-thymeleaf</artifactId>
+        </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
@@ -186,7 +204,19 @@
             <artifactId>spring-boot-devtools</artifactId>
             <scope>provided</scope>
         </dependency>
+        <!--swagger restful接口自动可视化界面工具-->
+        <dependency>
+            <groupId>io.springfox</groupId>
+            <artifactId>springfox-swagger2</artifactId>
+            <version>${swagger.version}</version>
+        </dependency>
 
+        <dependency>
+            <groupId>io.springfox</groupId>
+            <artifactId>springfox-swagger-ui</artifactId>
+            <version>${swagger.version}</version>
+        </dependency>
+        <!--swagger restful接口自动可视化界面工具-->
     </dependencies>
 
     <!-- 专用依赖统一管理 -->

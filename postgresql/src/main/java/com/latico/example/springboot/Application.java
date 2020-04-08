@@ -1,4 +1,4 @@
-package com.latico.example.springboot.eureka.client;
+package com.latico.example.springboot;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -23,5 +23,6 @@ public class Application {
     public static void main(String[] args) throws Throwable {
         //启动springboot容器
         SpringApplication.run(Application.class, args);
+
     }
 }
