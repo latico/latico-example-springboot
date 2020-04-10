@@ -35,6 +35,7 @@
         <module>springbatch-quartz</module>
         <module>redis</module>
         <module>postgresql</module>
+        <module>cephfs</module>
     </modules>
     <packaging>pom</packaging>
 
@@ -138,7 +139,10 @@
                     <encoding>${project.encoding}</encoding>
                 </configuration>
             </plugin>
-
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
         </plugins>
 
         <!-- 专用插件统一管理 -->

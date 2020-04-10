@@ -21,4 +21,25 @@
             <artifactId>spring-boot-starter</artifactId>
         </dependency>
     </dependencies>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <id>repackage</id>
+                        <goals>
+                            <goal>repackage</goal>
+                        </goals>
+                    </execution>
+                </executions>
+                <configuration>
+                    <!--指定启动类-->
+                    <!--<mainClass>${start-class}</mainClass>-->
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
 </project>
