@@ -1,6 +1,24 @@
-HELP.md
+!**/src/main/**
+!**/src/test/**
 /target/
-!.mvn/wrapper/maven-wrapper.jar
+target/
+.settings/
+*~
+#*
+*#
+.#*
+/out/
+/logs/
+/log/
+*.log
+*.swp
+.gradle/
+gradle/
+### maven
+pom.xml.versionsBackup
+
+HELP.md
+.mvn/
 
 ### STS ###
 .apt_generated
@@ -17,6 +35,7 @@ HELP.md
 *.iml
 *.ipr
 
+
 ### NetBeans ###
 /nbproject/private/
 /nbbuild/
@@ -27,20 +46,10 @@ HELP.md
 ### VS Code ###
 .vscode/
 
-*~
-#*
-*#
-.#*
-out/
-logs/
-log/
-*.log
-gen
-target/
-pom.xml.versionsBackup
-.settings/
+### project special
+/gen
 .apt_generated/
-_site/
-*.swp
-_generator/
-_mybatisplus_generator/
+/_site/
+/_generator/
+/_mybatisplus_generator/
+/ehcache/
