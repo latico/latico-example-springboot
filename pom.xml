@@ -36,6 +36,9 @@
         <module>redis</module>
         <module>postgresql</module>
         <module>cephfs</module>
+        <module>hbase</module>
+        <module>ehcache3</module>
+        <module>ehcache2</module>
     </modules>
     <packaging>pom</packaging>
 

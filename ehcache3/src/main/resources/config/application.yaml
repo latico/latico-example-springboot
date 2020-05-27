@@ -1,0 +1,21 @@
+server:
+  port: 8080
+  servlet:
+    context-path: /
+spring:
+  application:
+    name: starter-origin
+  cache:
+    jcache: # 这里是 jcache 不是 ecache。我们使用的 ecache 3.x
+      config: classpath:config/ehcache.xml
+#http编码配置
+http:
+  encoding:
+    charset: UTF-8
+    force: true
+    enabled: true
+
+#  是否启动swagger
+swagger:
+  show: true
+
