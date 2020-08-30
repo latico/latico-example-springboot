@@ -4,7 +4,7 @@ server:
     context-path: /
 spring:
   application:
-    name: websocket-service
+    name: spring-websocket
 #http编码配置
 http:
   encoding:
@@ -15,10 +15,3 @@ http:
 #  是否启动swagger
 swagger:
   show: true
-
-#配置资源安全相关
-resource-security-config:
-  signingKey: key@123
-  resourceId: resIdDefault
-  authorizeRequestPermitUrlMatchers:
-    - '/uaa/**'

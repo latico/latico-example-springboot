@@ -9,9 +9,9 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>websocket</artifactId>
+    <artifactId>spring-websocket</artifactId>
 
-    <name>websocket</name>
+    <name>spring-websocket</name>
     <!-- FIXME change it to the project's website -->
     <url>http://www.example.com</url>
 
@@ -24,12 +24,7 @@
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
         </dependency>-->
-        <!-- 增加安全机制 -->
-       <!-- <dependency>
-            <groupId>com.latico.springcloud</groupId>
-            <artifactId>springcloud-oauth2-resource-server-starter</artifactId>
-            <version>1.0.0</version>
-        </dependency>-->
+
     </dependencies>
 
     <build>

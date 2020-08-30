@@ -29,7 +29,7 @@ public class WebSocketSessionManagerImpl implements WebSocketSessionManager {
     /**
      * session的参数中，存放用户ID的参数的名称，这里默认使用路径参数的名称，此时要求连接的时候，用户要把uid作为路径的一部分
      */
-    protected final String uidParamKeyName = WebSocketConfig.uidParamKeyName;
+    protected String uidParamKeyName;
 
     /**
      *
@@ -40,7 +40,9 @@ public class WebSocketSessionManagerImpl implements WebSocketSessionManager {
      *
      */
     private final ConcurrentHashMap<String, Session> uidSessionMap = new ConcurrentHashMap<>();
-
+    public WebSocketSessionManagerImpl(String uidParamKeyName) {
+        this.uidParamKeyName = uidParamKeyName;
+    }
     /**
      * 增加session到缓存
      * @param session

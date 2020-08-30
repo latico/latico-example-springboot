@@ -33,7 +33,7 @@ public class WebSocketConfig {
      */
     public static final String websocketPath = "/websocket/{" + pathParamName + "}";
 
-    public static final WebSocketSessionManager webSocketSessionManager = new WebSocketSessionManagerImpl();
+    public static final WebSocketSessionManager webSocketSessionManager = new WebSocketSessionManagerImpl(uidParamKeyName);
     public static final WebSocketServiceHandler webSocketServiceHandler = new WebSocketServiceHandlerImpl();
 
 
