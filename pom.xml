@@ -39,6 +39,7 @@
         <module>hbase</module>
         <module>ehcache3</module>
         <module>ehcache2</module>
+        <module>websocket</module>
     </modules>
     <packaging>pom</packaging>
 
@@ -183,6 +184,12 @@
         <dependency>
             <groupId>com.latico.commons</groupId>
             <artifactId>latico-commons-common</artifactId>
+            <version>1.0.0</version>
+        </dependency>
+        <!--spring工具类，可以拿到spring里面的对象操作-->
+        <dependency>
+            <groupId>com.latico.commons</groupId>
+            <artifactId>latico-commons-spring</artifactId>
             <version>1.0.0</version>
         </dependency>
         <!-- thymeleaf模版 -->

@@ -1,24 +1,12 @@
+### 因为骨架打包的原因，.gitignore打包不进去，新建项目后把该文件重命名为: .gitignore
 !**/src/main/**
 !**/src/test/**
+HELP.md
 /target/
 target/
-.settings/
-*~
-#*
-*#
-.#*
-/out/
-/logs/
-/log/
-*.log
-*.swp
-.gradle/
-gradle/
-### maven
-pom.xml.versionsBackup
-
-HELP.md
 .mvn/
+.gradle/
+/gradle/
 
 ### STS ###
 .apt_generated
@@ -30,11 +18,10 @@ HELP.md
 .sts4-cache
 
 ### IntelliJ IDEA ###
-.idea
+.idea/
 *.iws
 *.iml
 *.ipr
-
 
 ### NetBeans ###
 /nbproject/private/
@@ -46,10 +33,26 @@ HELP.md
 ### VS Code ###
 .vscode/
 
-### project special
-/gen
+*~
+~$*
+#*
+*#
+.#*
+/out/
+/logs/
+logs/
+/log/
+log/
+*.log
+/gen/
+pom.xml.versionsBackup
+.settings/
 .apt_generated/
-/_site/
+_site/
+*.swp
 /_generator/
 /_mybatisplus_generator/
 /ehcache/
+ehcache/
+/tmp/
+tmp/
