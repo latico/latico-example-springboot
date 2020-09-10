@@ -1,10 +1,9 @@
-package com.latico.example.springboot.invoker.feign.eureka;
+package com.latico.example.springboot;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.web.servlet.ServletComponentScan;
-import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
-import org.springframework.cloud.openfeign.EnableFeignClients;
+import org.springframework.cloud.netflix.zuul.EnableZuulProxy;
 
 /**
  * <PRE>
@@ -16,8 +15,7 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
  */
 @SpringBootApplication(scanBasePackageClasses={Application.class})
 @ServletComponentScan
-@EnableEurekaClient
-@EnableFeignClients
+@EnableZuulProxy
 public class Application {
     /**
      * springboot启动
@@ -27,7 +25,6 @@ public class Application {
     public static void main(String[] args) throws Throwable {
         //启动springboot容器
         SpringApplication.run(Application.class, args);
-
         System.out.println("启动完成");
     }
 }

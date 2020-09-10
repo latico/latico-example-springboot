@@ -40,7 +40,8 @@
         <module>ehcache3</module>
         <module>ehcache2</module>
         <module>websocket</module>
-        <module>spring-websocket</module>
+        <module>websocket-stomp</module>
+        <module>zuul-dynamic-route</module>
     </modules>
     <packaging>pom</packaging>
 

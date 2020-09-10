@@ -4,7 +4,10 @@ import com.latico.commons.common.util.io.FileUtils;
 import com.latico.commons.common.util.logging.Logger;
 import com.latico.commons.common.util.logging.LoggerFactory;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.io.File;
@@ -28,20 +31,10 @@ public class DemoController {
     /**
      * @return 字符串类型数据
      */
-    @GetMapping(value = "hello")
+    @RequestMapping(value = "hello")
     public String hello() {
         //返回字符串，需要包一层JSON
         return "端口" + serverPort + ":服务生产者数据:" + "你好";
-    }
-
-    @GetMapping(value = "hello2")
-    public DemoBean hello2() {
-        String hello = "hello";
-        DemoBean demoBean = new DemoBean();
-        demoBean.setData(hello.getBytes());
-        demoBean.setStr("你好");
-
-        return demoBean;
     }
 
     @RequestMapping(value="uploadFile", method = RequestMethod.POST)

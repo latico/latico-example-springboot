@@ -30,6 +30,7 @@ public class WebSocketServiceHandlerImpl implements WebSocketServiceHandler {
      */
     @Override
     public void doBizByOnOpen(Session session, String pathParam) {
+        LOG.info("新用户连接session身份:{}", session.getUserPrincipal());
         //打印一些信息
         Map<String, String> pathParameters = session.getPathParameters();
         Map<String, List<String>> requestParameterMap = session.getRequestParameterMap();
