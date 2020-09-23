@@ -4,10 +4,17 @@ server:
     context-path: /
 spring:
   application:
-    name: starter-origin
+    name: mail
+  mail:
+    host: smtp.qq.com
+    port: 465
+    username: platico@qq.com
+#    密码是邮件密码的授权码
+    password: 123456
 
 eureka:
   client:
     serviceUrl:
       #      可以多个，用逗号分割，逗号跟实际内容之间不能有空格
       defaultZone: http://admin:admin@localhost:5000/eureka/
+

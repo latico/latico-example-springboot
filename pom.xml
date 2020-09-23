@@ -42,6 +42,7 @@
         <module>websocket</module>
         <module>websocket-stomp</module>
         <module>zuul-dynamic-route</module>
+        <module>mail</module>
     </modules>
     <packaging>pom</packaging>
 

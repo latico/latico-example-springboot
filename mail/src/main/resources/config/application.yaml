@@ -27,6 +27,32 @@ spring:
         - (?i).*loopback.*
         - (?i).*Virtual.*
         - 169\..*
+  mail:
+    default-encoding: UTF-8
+    properties:
+      mail:
+        smtp:
+          connectiontimeout: 10000
+          writetimeout: 60000
+          timeout: 90000
+          ssl:
+            enable: true
+          socketFactory:
+            class: javax.net.ssl.SSLSocketFactory
+#            port: 465
+          auth: true
+          starttls:
+            enable: true
+            required: true
+#      mail.smtp.connectiontimeout: 10000
+#      mail.smtp.writetimeout: 60000
+#      mail.smtp.timeout: 10000
+#      mail.smtp.ssl.enable: true
+#      mail.smtp.socketFactory.class: javax.net.ssl.SSLSocketFactory
+#      mail.smtp.auth: true
+#      mail.smtp.starttls.enable: true
+#      mail.smtp.starttls.required: true
+
 #客户端负载均衡配置，feign底层用的ribbon
 ribbon:
   # 请求连接的超时时间
@@ -75,3 +101,4 @@ logging:
 
   #  如果是使用jar方式启动
   config: classpath:config/logback.xml
+

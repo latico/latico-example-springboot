@@ -1,7 +1,8 @@
-package com.latico.example.springboot;
+package com.latico.example.springboot.config;
 
 import com.latico.commons.common.util.collections.CollectionUtils;
 import com.latico.commons.common.util.system.SystemUtils;
+import com.latico.example.springboot.Application;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
