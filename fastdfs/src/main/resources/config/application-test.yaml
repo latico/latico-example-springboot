@@ -1,0 +1,13 @@
+server:
+  port: 8080
+  servlet:
+    context-path: /
+spring:
+  application:
+    name: starter-origin
+
+eureka:
+  client:
+    serviceUrl:
+      #      可以多个，用逗号分割，逗号跟实际内容之间不能有空格
+      defaultZone: http://admin:admin@localhost:5000/eureka/

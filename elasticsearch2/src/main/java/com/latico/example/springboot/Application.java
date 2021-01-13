@@ -1,4 +1,4 @@
-package com.latico.example.springboot.invoker.feign.eureka;
+package com.latico.example.springboot;
 
 import com.latico.commons.common.util.collections.CollectionUtils;
 import com.latico.commons.common.util.logging.Logger;
@@ -8,8 +8,6 @@ import com.latico.commons.spring.util.SpringUtils;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.web.servlet.ServletComponentScan;
-import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
-import org.springframework.cloud.openfeign.EnableFeignClients;
 
 import java.net.InetAddress;
 import java.util.List;
@@ -24,16 +22,9 @@ import java.util.List;
  */
 @SpringBootApplication(scanBasePackageClasses={Application.class})
 @ServletComponentScan
-@EnableEurekaClient
-@EnableFeignClients
 public class Application {
     /** 日志对象 */
     private static final Logger LOG = LoggerFactory.getLogger(Application.class);
-    /**
-     * springboot启动
-     * @param args
-     * @throws Throwable
-     */
     /**
      * springboot启动
      * @param args

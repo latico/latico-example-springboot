@@ -13,6 +13,7 @@ import org.springframework.boot.web.servlet.ServletComponentScan;
  * @Version: 1.0
  */
 @SpringBootApplication(scanBasePackageClasses={Application.class})
+//druid的界面功能需要这个主机
 @ServletComponentScan
 public class Application {
     /**

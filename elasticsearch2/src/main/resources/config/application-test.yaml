@@ -1,0 +1,23 @@
+server:
+  port: 8080
+  servlet:
+    context-path: /
+spring:
+  application:
+    name: elasticsearch2
+  ##REST方式配置
+  elasticsearch:
+    rest:
+      username:
+      password:
+      connection-timeout: PT10S
+      read-timeout: PT60S
+      uris:
+        - http://172.168.10.7:9200
+
+
+eureka:
+  client:
+    serviceUrl:
+      #      可以多个，用逗号分割，逗号跟实际内容之间不能有空格
+      defaultZone: http://admin:admin@localhost:5000/eureka/

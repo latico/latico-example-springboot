@@ -1,0 +1,77 @@
+server:
+#http编码配置
+http:
+  encoding:
+    charset: UTF-8
+    force: true
+    enabled: true
+
+#  是否启动swagger
+swagger:
+  show: true
+
+spring:
+  ###########################################################
+  ###########################################################
+  #spring安全认证配置
+  security:
+    user:
+      name: admin
+      password: admin
+  cloud:
+    inetutils:
+      # 忽略指定网卡，支持正则表达式（这里使用正则表达式忽略所有虚拟机网卡）
+      ignoredInterfaces:
+        - (?i)VMware.*
+        - (?i)vir.*
+        - (?i).*loopback.*
+        - (?i).*Virtual.*
+        - 169\..*
+#客户端负载均衡配置，feign底层用的ribbon
+ribbon:
+  # 请求连接的超时时间
+  ConnectTimeout: 10000
+  # 请求处理的超时时间
+  ReadTimeout: 60000
+  # 对当前实例的重试次数
+  maxAutoRetries: 1
+  # 切换实例的重试次数
+  maxAutoRetriesNextServer: 3
+  # 对所有操作请求都进行重试
+  okToRetryOnAllOperations: true
+  # 对Http响应码进行重试
+#  retryableStatusCodes: 500,404,502
+###########################################################
+###########################################################
+#目前基本使用Feign都是与ribbon结合使用的，但是feign客户端超时的优先级高于ribbon，可以二配一即可
+feign:
+  #  启动支持熔断器
+  hystrix:
+    enabled: true
+  client:
+    config:
+      default:
+        connectTimeout: 10000
+        readTimeout: 60000
+###########################################################
+###########################################################
+eureka:
+  instance:
+    #客户端IP，因为假如存在多网卡，要明确使用某个网卡的IP跟服务端进行通信，默认是自动选择一个
+    #    ip-address: 127.0.0.1
+    preferIpAddress: true
+
+    # 每隔10s发送一次心跳
+    lease-renewal-interval-in-seconds: 10
+    # 告知服务端30秒还未收到心跳的话，就将该服务移除列表
+    lease-expiration-duration-in-seconds: 30
+    #    eureka的管理页面中的注册客户端列表的status字段显示的内容，设置显示swagger
+    statusPageUrlPath: /swagger-ui.html
+    #springcloud上面显示本地客户端信息，建议是本机的IP，默认认为客户端程序跟服务端部署到同一个机器，所以跟注册中心一样
+#    instance-id: localhost:${spring.application.name}:${server.port}
+
+logging:
+  #  引入日志配置文件,logback的jar跟log4j2的jar不能共存，日志配置根据实际情况配置
+
+  #  如果是使用jar方式启动
+  config: classpath:config/logback.xml

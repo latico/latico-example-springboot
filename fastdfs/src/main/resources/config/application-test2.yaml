@@ -1,0 +1,34 @@
+server:
+  port: 8080
+  servlet:
+    context-path: /
+spring:
+  application:
+    name: fastdfs
+fdfs:
+  so-timeout: 15000
+  connect-timeout: 10000
+  #缩略图生成参数
+  thumb-image:
+    width: 150
+    height: 150
+  #TrackerList参数,支持多个
+  tracker-list:
+    - 172.168.25.114:22122
+  pool:
+    #注意: key配置的是连接服务端的地址(IP+端口)连接情况，如果有连接不够用的情况可以调整以上参数
+    #从池中借出的对象的最大数目（配置为-1表示不限制）
+    max-total: -1
+    #获取连接时的最大等待毫秒数(默认配置为5秒)
+    max-wait-millis: 10000
+    #每个key最大连接数
+    max-total-per-key: 50
+    #每个key对应的连接池最大空闲连接数
+    max-idle-per-key: 10
+    #每个key对应的连接池最小空闲连接数
+    max_idle_per_key: 5
+eureka:
+  client:
+    serviceUrl:
+      #      可以多个，用逗号分割，逗号跟实际内容之间不能有空格
+      defaultZone: http://admin:admin@172.168.10.7:5000/eureka/

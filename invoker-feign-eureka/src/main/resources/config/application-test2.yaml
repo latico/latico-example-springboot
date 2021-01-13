@@ -1,0 +1,12 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: starter-origin
+
+eureka:
+  client:
+    serviceUrl:
+      #      可以多个，用逗号分割，逗号跟实际内容之间不能有空格
+      defaultZone: http://admin:1@172.168.27.251:26004/eureka/

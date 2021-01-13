@@ -8,24 +8,26 @@
         <version>1.0</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
-
-    <artifactId>mail</artifactId>
+    <artifactId>remote-shell</artifactId>
 
     <name>${project.artifactId}</name>
-    <!-- FIXME change it to the project's website -->
+    <!-- FIXE change it to the project's website -->
     <url>http://www.example.com</url>
 
-    <properties>
-    </properties>
-
     <dependencies>
+        <!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-remote-shell -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-mail</artifactId>
+            <artifactId>spring-boot-starter-remote-shell</artifactId>
+            <version>1.5.22.RELEASE</version>
         </dependency>
+
+
     </dependencies>
 
     <build>
+        <plugins>
 
+        </plugins>
     </build>
 </project>

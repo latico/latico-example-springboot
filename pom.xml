@@ -43,6 +43,8 @@
         <module>websocket-stomp</module>
         <module>zuul-dynamic-route</module>
         <module>mail</module>
+        <module>elasticsearch2</module>
+        <module>fastdfs</module>
     </modules>
     <packaging>pom</packaging>
 
@@ -81,9 +83,10 @@
         <slf4j.version>1.7.25</slf4j.version>
         <logback.version>1.2.3</logback.version>
         <janino.version>3.0.11</janino.version>
-        <springcloud.version>Hoxton.RELEASE</springcloud.version>
-        <springboot.version>2.2.1.RELEASE</springboot.version>
-
+      <!--  <springcloud.version>Hoxton.SR6</springcloud.version>
+        <springboot.version>2.3.5.RELEASE</springboot.version>-->
+        <springcloud.version>Hoxton.SR9</springcloud.version>
+        <springboot.version>2.3.5.RELEASE</springboot.version>
         <!--旧版本的springboot和springcloud组合，因为新版的JPA对bean对象格式规范检测很严格，程序启动会报错提示修改字段为规范-->
         <!--<springcloud.version>Finchley.RELEASE</springcloud.version>
         <springboot.version>2.1.4.RELEASE</springboot.version>-->
@@ -187,13 +190,13 @@
         <dependency>
             <groupId>com.latico.commons</groupId>
             <artifactId>latico-commons-common</artifactId>
-            <version>1.0.0</version>
+            <version>1.0.0-SNAPSHOT</version>
         </dependency>
         <!--spring工具类，可以拿到spring里面的对象操作-->
         <dependency>
             <groupId>com.latico.commons</groupId>
             <artifactId>latico-commons-spring</artifactId>
-            <version>1.0.0</version>
+            <version>1.0.0-SNAPSHOT</version>
         </dependency>
         <!-- thymeleaf模版 -->
         <dependency>
